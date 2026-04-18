@@ -32,3 +32,6 @@ jobs:
     - name: Testleri Çalıştır
       run: |
         pytest
+    - name: Docker İmajını Derle
+      run: |
+        docker build -t my-fastapi-app:${{ github.sha }} .	
